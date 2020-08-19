@@ -44,7 +44,7 @@ class DiscordHandler(Handler):
             _desc = f"```{_diff_text}```"
         embed = discord.Embed(title=_title, colour=_colour, url=_url, description=_desc)
 
-        embed.set_thumbnail(url="http://s.ppy.sh/a/3378391")
+        embed.set_thumbnail(url=f"http://s.ppy.sh/a/{user['id']}")
         embed.set_footer(
             text=f"{user['username']} | {self._position.get(user['default_group'])}"
         )
