@@ -45,7 +45,10 @@ class NominatorTrack:
         self.tasks = []
         self.loop = loop or asyncio.get_event_loop()
         self.web_client = AsyncOAuth2Client(
-            client_id, client_secret, scope=self._oauth_scope
+            client_id,
+            client_secret,
+            scope=self._oauth_scope,
+            token_endpoint=self._token_endpoint,
         )
 
         if not token:
